@@ -1,0 +1,28 @@
+ 
+<% include partials/head.ejs %>
+
+<div class="grid">
+
+  <% for(var i = 0; i < images.length; i++) { 
+    var imageTags = images[i].tags;
+    var imageHeight = Math.floor(images[i].height / (images[i].width / 250));
+  %>
+    <div class="grid-item" style="height: <%= imageHeight %>px;">
+      <div class="grid-item-content">
+        <a href="/images/<%= images[i].src %>" data-fancybox="images" class="imgPopup"><span class="overlay"><span class="iconWrap"><i class="fa fa-search-plus"></i></span></span><img width="230" height="<%= imageHeight - 20 %>" src="/images/<%= images[i].src %>" /></a>
+        <div class="tagsBlock">
+          <% for(var j = 0; j < imageTags.length; j++) { 
+            var tagID = imageTags[j];
+            var tagIndex = tags.findIndex(function(el) {
+              if(el.id == tagID) return true;
+            });
+          %>
+            <a class="tagLink" href="/tag/<%= tags[tagIndex].title %>"><%= tags[tagIndex].title %></a>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  <% } %>
+</div>
+    
+<% include partials/footer.ejs %>

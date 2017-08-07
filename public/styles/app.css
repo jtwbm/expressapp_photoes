@@ -1,0 +1,172 @@
+body {
+    background-color: #fafafa;
+    color: #757575;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+body * {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 70px auto 30px;
+    overflow: hidden;
+    width: 1250px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    color: #fff;
+    background-color: #bd081c;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+}
+
+header h1 {
+    display: inline-block;
+    color: #323330;
+    margin: 1rem auto;
+    color: #fff;
+}
+
+/* Buttons */
+.btn-red {
+    background-color: #bd081c;
+    color: #fff;
+    border-color: #990000;
+}
+.btn-red:hover {
+    background-color: #ac0011;
+    color: #fff;
+    border-color: #880000;
+}
+.btn-red .fa {
+    margin-right: 5px;
+}
+
+/* notFound */ 
+.notFound {
+    text-align: center;
+    margin: 100px 20px;
+}
+.notFound a {
+    margin-top: 20px;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* search */ 
+.searchWrap {
+    position: relative;
+}
+.searchDropdown {
+    border: 1px solid #ccc;
+    border-top: none;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    background: #fff;
+}
+.searchDropdown:empty {
+    border: none;
+}
+.searchDropdown span {
+    display: block;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.searchDropdown span:hover {
+    background-color: #ccc;
+    color: #555;
+}
+
+
+/* grid */
+.grid-item {
+    position: relative;
+}
+.tagsBlock {
+    position: absolute;
+    left: 20px;
+    bottom: 30px;
+    width: 230px; 
+}
+.tagsBlock a {
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin-top: 5px;
+}
+.tagsBlock a:hover {
+    text-decoration: none;
+    background-color: rgba(0,0,0,.5);
+}
+.imgPopup {
+    margin: 10px;
+    width: 100%;
+    height: 100%;
+}
+.imgPopup .iconWrap {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+.imgPopup .iconWrap i.fa {
+    display: inline-block;
+    color: #fff;
+    font-size: 30px;
+}
+.imgPopup .overlay {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: -10px;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+    background-color: rgba(0,0,0,.2);
+}
+.grid-item:hover .overlay {
+    display: table;
+}
+
+
+/* MEDIA */ 
+@media (max-width: 1300px) {
+    main {
+        width: 1000px;
+    }
+}
+@media (max-width: 1040px) {
+    main {
+        width: 750px;
+    }
+}
+@media (max-width: 780px) {
+    main {
+        width: 500px;
+    }
+}
+@media (max-width: 520px) {
+    main {
+        width: 250px;
+    }
+}

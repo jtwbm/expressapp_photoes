@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="/styles/app.css">
+  </head>
+  <body>
+
+	<main>
+		
+		<header>
+	        <h1><%= title %></h1>
+	      </header>
+
+
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <div class="collapse navbar-collapse">
+
+		    	<% if(homepageLink) { %>
+				    <ul class="nav navbar-nav">
+				        <li><a href="/">Homepage</a></li>
+			      	</ul>
+			    <% } %>
+		      	<form class="navbar-form navbar-right searchForm">
+			        <div class="form-group">
+			          <input id="search" autocomplete="off" type="text" class="form-control searchInput" placeholder="Search...">
+			        </div>
+			        <button type="submit" class="btn btn-default btn-red"><i class="fa fa-search"></i> Find Tag</button>
+		      	</form>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+			
+      
+
+		  	
