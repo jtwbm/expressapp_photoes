@@ -16,6 +16,4 @@ app.get('/tag/:tag?', routes.tag);
 // notFound
 app.get('*', routes.notFound);
 
-app.listen(3000, function() {
-	console.log('localhost:3000');
-});
+app.listen(process.env.PORT || 3000);
